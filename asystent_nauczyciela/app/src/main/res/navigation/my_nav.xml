@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/fragmentStart">
+
+    <fragment
+        android:id="@+id/fragmentStart"
+        android:name="com.example.asystentnauczyciela.view.fragmentStart"
+        android:label="fragment_start"
+        tools:layout="@layout/fragment_start" />
+    <fragment
+        android:id="@+id/fragmentZajecia"
+        android:name="com.example.asystentnauczyciela.view.fragmentZajecia"
+        android:label="fragment_zajecia"
+        tools:layout="@layout/fragment_zajecia" >
+        <action
+            android:id="@+id/action_fragmentZajecia_to_fragmentDodawanieZajec"
+            app:destination="@id/fragmentDodawanieZajec" />
+        <action
+            android:id="@+id/action_fragmentZajecia_to_fragmentEdytowanieZajec"
+            app:destination="@id/fragmentEdytowanieZajec" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentStudenci"
+        android:name="com.example.asystentnauczyciela.view.fragmentStudenci"
+        android:label="fragment_studenci"
+        tools:layout="@layout/fragment_studenci" >
+        <action
+            android:id="@+id/action_fragmentStudenci_to_fragmentDodawanieStudenta"
+            app:destination="@id/fragmentDodawanieStudenta" />
+        <action
+            android:id="@+id/action_fragmentStudenci_to_fragmentEdytowanieStudenta"
+            app:destination="@id/fragmentEdytowanieStudenta" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentDodawanieStudenta"
+        android:name="com.example.asystentnauczyciela.view.FragmentDodawanieStudenta"
+        android:label="fragment_dodawanie_studenta"
+        tools:layout="@layout/fragment_dodawanie_studenta" />
+ <!--   <fragment
+        android:id="@+id/fragmentDodawanieZajec"
+        android:name="com.example.asystentnauczyciela.view.FragmentDodawanieStudenta"
+        android:label="fragment_dodawanie_zajec"
+        tools:layout="@layout/fragment_dodawanie_zajec" />-->
+    <fragment
+        android:id="@+id/fragmentDodawanieZajec"
+        android:name="com.example.asystentnauczyciela.view.FragmentDodawanieZajec"
+        android:label="fragment_blank"
+        tools:layout="@layout/fragment_dodawanie_zajec" />
+    <fragment
+        android:id="@+id/fragmentEdytowanieStudenta"
+        android:name="com.example.asystentnauczyciela.view.FragmentEdytujStudenta"
+        android:label="fragment_edytuj_studenta"
+        tools:layout="@layout/fragment_edytowanie_studenta" >
+        <argument
+            android:name="currentStudent"
+            app:argType="com.example.asystentnauczyciela.model.Student" />
+        <action
+            android:id="@+id/action_fragmentEdytowanieStudenta_to_fragmentZajeciaDoPrzypisania"
+            app:destination="@id/fragmentZajeciaDoPrzypisania" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentEdytowanieZajec"
+        android:name="com.example.asystentnauczyciela.view.FragmentEdytowanieZajec"
+        android:label="fragment_edytowanie_zajec"
+        tools:layout="@layout/fragment_edytowanie_zajec" >
+        <argument
+            android:name="FragmentEdytowanieZajec"
+            app:argType="com.example.asystentnauczyciela.model.Subject" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentZajeciaDoPrzypisania"
+        android:name="com.example.asystentnauczyciela.view.FragmentZajeciaDoPrzypisania"
+        android:label="fragment_zajecia_do_przypisania"
+        tools:layout="@layout/fragment_zajecia_do_przypisania" >
+        <argument
+            android:name="IdStudenta"
+            app:argType="integer" />
+    </fragment>
+</navigation>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#CDE1DD"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/wczytaj_imie"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:hint="imie" />
+
+    <EditText
+        android:id="@+id/wczytaj_nazwisko"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:hint="nazwisko" />
+    <!--
+    <EditText
+        android:id="@+id/nr_albumu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:hint="numer albumu"
+        />-->
+
+    <Button
+        android:id="@+id/dodaj_studenta"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:text="dodaj" />
+
+
+
+</LinearLayout>

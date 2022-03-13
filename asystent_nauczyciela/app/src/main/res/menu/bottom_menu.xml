@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/fragmentStart"
+        android:icon="@drawable/ic_baseline_home_24"
+        android:title="Głowna"
+    />
+    <item
+        android:id="@+id/fragmentStudenci"
+        android:icon="@drawable/ic_baseline_people_24"
+        android:title="Studenci"
+    />
+    <item
+        android:id="@+id/fragmentZajecia"
+        android:icon="@drawable/ic_baseline_school_24"
+        android:title="Zajecia"
+    />
+</menu>
